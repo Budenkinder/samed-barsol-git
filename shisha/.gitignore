@@ -1,0 +1,54 @@
+# User-specific files (screenshots)
+/device-2019-12-16-221202.png
+/device-2019-12-16-221225.png
+/device-2019-12-16-221238.png
+/device-2019-12-16-221838.png
+/device-2019-12-16-222531.png
+/device-2019-12-16-224718.png
+/device-2019-12-16-224858.png
+
+# Built application files
+/Shisha-Tabbar-App/*/build/
+
+# Gradle files
+.gradle
+/Shisha-Tabbar-App/.gradle
+/Shisha-Tabbar-App/build/
+
+# Crashlytics configuration
+com_crashlytics_export_strings.xml
+
+# Local configuration
+/Shisha-Tabbar-App/local.properties
+
+# Signing files
+/Shisha-Tabbar-App/.signing/
+
+# IntelliJ IDEA
+.idea/
+/Shisha-Tabbar-App/.idea/workspace.xml
+/Shisha-Tabbar-App/.idea/tasks.xml
+/Shisha-Tabbar-App/*.iml
+*.iws
+*.ipr
+
+# OS-specific files
+.DS_Store
+._*
+ehthumbs.db
+Thumbs.db
+
+# Kotlin compiler output
+/Shisha-Tabbar-App/out/
+
+# Android Studio generated files
+/Shisha-Tabbar-App/captures/
+
+# Keystore files
+*.jks
+*.keystore
+
+#NDK
+/Shisha-Tabbar-App/obj/
+/Shisha-Tabbar-App/libs/
+/Shisha-Tabbar-App/*.so

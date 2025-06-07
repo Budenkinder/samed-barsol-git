@@ -1,0 +1,363 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- neu oben -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/new_entry_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Neuer Eintrag - Oberhalb"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/edit_header_title"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="Soll der neue Eintrag Abstand nach oben haben ?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_block_top"
+                    android:layout_width="match_parent"
+                    android:theme="@style/MyEditText"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="ja, ansonsten leer lassen"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Preise des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_price_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Preis"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Name des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_name_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Beschreibung des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_description_top"
+                    android:layout_width="match_parent"
+                    android:theme="@style/MyEditText"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Beschreibung"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+            </LinearLayout>
+
+            <!-- aktuelle auswahl -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryGrey"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/current_entry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Aktuelle Auswahl anpassen"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/edit_header_title"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="Abstand nach oben ändern"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/change_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="ja, ansonsten leer lassen"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Preis ändern"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/change_price_current"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Preis ändern"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Name ändern"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/change_name_current"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:theme="@style/MyEditText"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Name ändern"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Beschreibung ändern"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/change_description_current"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Beschreibung ändern"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+            </LinearLayout>
+
+            <!-- neu unten -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/new_entry_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Neuer Eintrag - Unterhalb"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="@dimen/edit_header_title"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:text="Soll der neue Eintrag Abstand nach oben haben ?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_block_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="ja, ansonsten leer lassen"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Preise des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_price_bottom"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Preis"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Name des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_name_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/MyEditText"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:text="Beschreibung des neuen Produkts"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/edit_item_title"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/add_item_description_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textCursorDrawable="@drawable/edit_text_cursor"
+                    android:theme="@style/MyEditText"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Beschreibung"
+                    android:inputType="text"
+                    android:textSize="12dp"
+                    android:typeface="monospace" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

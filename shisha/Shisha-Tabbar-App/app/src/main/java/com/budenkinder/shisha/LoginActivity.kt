@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     // [END declare_auth]
 
     private var verificationInProgress = false
-    private var storedVerificationId: String? = ""
+    private var storedVerificationId: String? = null
     private lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
     private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
@@ -120,6 +120,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyPhoneNumberWithCode(verificationId: String?, code: String) {
+
+        if (verificationId == null) {
+            android.util.Log.e(TAG, "Verification ID is null. Cannot verify.")
+            updateUI(STATE_VERIFY_FAILED) // Or some other appropriate error state
+            return
+        }
+
         val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
         signInWithPhoneAuthCredential(credential)
     }

@@ -40,9 +40,9 @@ class MenuFragment : Fragment() {
         shishaData = arguments?.getSerializable("dao") as ShishaData
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
-        context?.let {
+        context.let {
             activity = context as AppCompatActivity
         }
     }

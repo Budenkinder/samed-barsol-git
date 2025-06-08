@@ -1,15 +1,28 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    namespace 'com.budenkinder.shisha'
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8" // Or "11", "17" depending on your project
+    }
+
+    //noinspection GradleDependency
     defaultConfig {
         applicationId "com.budenkinder.shisha"
-        minSdkVersion 23
-        targetSdkVersion 28
+        compileSdkVersion 36
+        minSdkVersion 26
+        targetSdkVersion 35
         versionCode 4
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -24,18 +37,20 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    //noinspection GradleCompatible
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //noinspection GradleCompatible
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.github.abdularis:parallaximageview:1.1'
-    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
-    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    implementation 'com.google.firebase:firebase-auth:23.2.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -32,6 +32,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            // This block is often present by default, or its settings are defaults.
+            // Common debug configurations:
+            versionNameSuffix "-debug"    // Appends -debug to your version name
+            debuggable true             // This is true by default for the debug build type
+            // signingConfig signingConfigs.debug // Uses the default debug signing key
+            // You can add other flags, resource values, manifest placeholders, etc.
         }
     }
 }
